@@ -4,7 +4,7 @@ import joblib
 import pandas as pd 
 tree=joblib.load('Claydoh.pkl')
 forest=joblib.load('RandomForest.pkl')
-X_test,Y_testjoblib.load('test_data.pkl')
+X_test,Y_test=joblib.load('test_data.pkl')
 FastFood = pd.read_csv("https://raw.githubusercontent.com/himayatulmillah/Nutrition-Fact-for-Menu-of-McDonald/refs/heads/main/menu_mcd.csv")
 Features = FastFood.drop(columns=['Category', 'Item', 'Serving Size'])
 st.title("Can the AI guess the category?")
