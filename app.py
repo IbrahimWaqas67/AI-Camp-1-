@@ -10,7 +10,7 @@ Features = FastFood.drop(columns=['Category', 'Item', 'Serving Size'])
 st.title("Can the AI guess the category?")
 st.write("Pick any real McDonald's item and watch 2 AI Brains guess live.")
 
-Item_name=st.selectbox("Pick a menu item.",FastFood['Item'])
+item_name=st.selectbox("Pick a menu item.",FastFood['Item'])
 
 if st.button("Predict the category."):
     row = Features[FastFood['Item'] == item_name].iloc[[0]]
